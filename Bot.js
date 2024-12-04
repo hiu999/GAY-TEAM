@@ -10,7 +10,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 async function runCommand(command) {
     // URL và token Codespaces API
     const CODESPACE_API_URL = 'https://api.github.com/user/codespaces/opulent-space-doodle-q7p56prvgxw9hxrg9/'; // Thay bằng URL API của Codespaces
-    const CODESPACE_TOKEN = 'YOUR_CODESPACE_API_TOKEN';
+    const CODESPACE_TOKEN = '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';
 
     const response = await fetch(CODESPACE_API_URL, {
         method: 'POST',
