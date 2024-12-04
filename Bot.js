@@ -9,7 +9,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 // Hàm chạy lệnh trong Codespaces qua API
 async function runCommand(command) {
     // URL và token Codespaces API
-    const CODESPACE_API_URL = 'https://api.github.com/...'; // Thay bằng URL API của Codespaces
+    const CODESPACE_API_URL = 'https://api.github.com/user/codespaces/opulent-space-doodle-q7p56prvgxw9hxrg9/'; // Thay bằng URL API của Codespaces
     const CODESPACE_TOKEN = 'YOUR_CODESPACE_API_TOKEN';
 
     const response = await fetch(CODESPACE_API_URL, {
