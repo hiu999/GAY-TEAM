@@ -1,1 +1,22 @@
+name: Run Command on GitHub
 
+on:
+  repository_dispatch:
+    types: [scheduled_run, manual_run]
+
+jobs:
+  run_command:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Run command based on input
+        run: |
+          echo "Running command from Discord..."
+          # Thực hiện lệnh của bạn tại đây, ví dụ:
+          if [[ "${{ github.event.client_payload.command }}" == "your_command" ]]; then
+            # Ví dụ: Chạy script hoặc lệnh shell
+            ./run_your_script.sh
+          fi
